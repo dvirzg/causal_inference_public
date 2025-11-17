@@ -9,7 +9,7 @@ This repository contains research on causal inference using nonconvex quadratic 
 ## Main Research Areas (Favourites/)
 
 ### 1. Unpacking DAGs (`Favourites/Unpacking DAGs/`)
-Transforms causal DAGs into counterfactual graphs to estimate **causal intervention effects** with hidden confounders. Nodes are "unpacked" into counterfactual versions (e.g., A → {A₀, A₁}), using quadratic separability constraints to compute bounds on causal effects P(Y | do(A=a)).
+Transforms causal DAGs into counterfactual graphs to estimate **causal intervention effects** with hidden confounders. Nodes are "unpacked" into counterfactual versions (e.g., $A \rightarrow \{A_0, A_1\}$), using quadratic separability constraints to compute bounds on causal effects $P(Y | \text{do}(A=a))$.
 
 **Key files:**
 - `unpacking_front_door_confounded.ipynb` - Main implementation with full documentation
@@ -17,7 +17,7 @@ Transforms causal DAGs into counterfactual graphs to estimate **causal intervent
 - `interuption_dag_dvirs*.ipynb` - Interruption DAG scenarios
 
 ### 2. Compatibility Testing (`Favourites/Compatibility/`)
-Tests if observed probability distributions are **compatible** with specific causal graph structures (Bell DAG). Determines whether correlations P(A,B|X,Y) can be explained by a classical hidden common cause using the structural equation: P(A,B|X,Y) = Σ_λ P(A|X,λ) × P(B|Y,λ) × P(λ).
+Tests if observed probability distributions are **compatible** with specific causal graph structures (Bell DAG). Determines whether correlations $P(A,B|X,Y)$ can be explained by a classical hidden common cause using the structural equation: $P(A,B|X,Y) = \sum_\lambda P(A|X,\lambda) \cdot P(B|Y,\lambda) \cdot P(\lambda)$.
 
 **Key files:**
 - `bell_compatibility_class.py` - Reusable class for Bell compatibility testing
